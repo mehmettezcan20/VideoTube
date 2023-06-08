@@ -83,7 +83,7 @@ class ViewController: UIViewController {
                                          target: self,
                                          action: #selector(leftHandAction))
         
-        nav.navigationBar.backgroundColor =  .red
+        nav.navigationBar.backgroundColor =  .yellow
         
         nav.navigationBar.topItem?.rightBarButtonItem = button
         nav.navigationBar.topItem?.title = "VideoTube"
