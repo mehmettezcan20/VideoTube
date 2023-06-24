@@ -14,17 +14,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+      
 //        navigateYouTubeViewController()
        
-//        topla1(sayi1: 1, sayi2: 2)
-//
-//        let sonuc = topla2(sayi1: 2, sayi2: 4)
-//        print(sonuc)
-//
-//        let ikideger = ikiDegerDonder(deger1: "Abdvd", deger2: "sdfdfsdf")
-//        print(ikideger)
-        
         self.navigateYouTubeViewController()
 //            // Örnek kullanım
 //            let searchQuery = "moruto" // Arama yapılacak kelime veya ifade
@@ -34,74 +26,36 @@ class ViewController: UIViewController {
 //            // searchResults, arama sonucunda bulunan videoların listesini içerecektir
 
         }
-        
     
-   
-    func topla1(sayi1:Int, sayi2:Int) -> Void{
-        let sonuc  =  sayi1  + sayi2
-        print(sonuc)
-    }
-    
-    func topla2(sayi1:Int, sayi2:Int)  -> Int{
-        let sonuc  =  sayi1   + sayi2
-        return sonuc
-    }
-    
-    func ikiDegerDonder(deger1:String, deger2:String) -> (String,Int) {
-        
-        let topla  =  deger1  + "  " + deger2
-        var crahterCount  =  topla.count
-        
-        let cevir1 = topla.uppercased()
-        let cevir2 = topla.lowercased()
-        
-        let r  =  cevir1  + cevir2
-        
-        let reversed = String(r.reversed())
-        
-        return (r, crahterCount)
-        
-    }
-    
-    func navigateYouTubeViewController(){
-        
+    func navigateYouTubeViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "YouTubeViewController") 
-        //self.navigationController?.present(vc, animated: true)
+        let vc = storyboard.instantiateViewController(withIdentifier: "YouTubeViewController")
+        let nav = UINavigationController(rootViewController: vc)
         
+     /* let button = UIBarButtonItem(title: "Right",
+                                     style: .done,
+                                     target: self,
+                                     action: #selector(rightHandAction))
         
-        let nav  =  UINavigationController.init(rootViewController: vc)
-        
-        
-        let button =     UIBarButtonItem(title: "Right",
-                                         style: .done,
-                                         target: self,
-                                         action: #selector(rightHandAction))
-        
-        let button2 =    UIBarButtonItem(title: "Left",
-                                         style: .plain,
-                                         target: self,
-                                         action: #selector(leftHandAction))
-        
-        nav.navigationBar.backgroundColor =  .red
-        
-        nav.navigationBar.topItem?.rightBarButtonItem = button
+        let button2 = UIBarButtonItem(title: "Left",
+                                      style: .plain,
+                                      target: self,
+                                      action: #selector(leftHandAction))    */
+          
+        nav.navigationBar.backgroundColor = .red
+     //   nav.navigationBar.topItem?.rightBarButtonItem = button
         nav.navigationBar.topItem?.title = "VideoTube"
+   //     nav.navigationBar.topItem?.leftBarButtonItem = button2
         
-        nav.navigationBar.topItem?.leftBarButtonItem = button2
-        
-        let searchBar = UISearchBar()
-            searchBar.placeholder = "Arama yapın"
-            searchBar.delegate = self
-
-        
-        nav.navigationBar.topItem?.titleView =  searchBar
-        
+        let titleView = UILabel()
+        titleView.text = "VideoTube"
+        titleView.textColor = .white
+        nav.navigationBar.topItem?.titleView = titleView
         
         self.present(nav, animated: false)
     }
 
-    
+
     @objc func rightHandAction() {
         dismiss(animated: true, completion: nil)
     }
@@ -109,7 +63,6 @@ class ViewController: UIViewController {
     @objc func leftHandAction() {
         dismiss(animated: true, completion: nil)
     }
-    
     
     func searchVideos(query: String) -> [YItem] {
         let lowercaseQuery = query.lowercased()
@@ -123,13 +76,11 @@ class ViewController: UIViewController {
                 return true
             }
             
-            return false
+                return false
         }
-        
         return filteredVideos
     }
 
-    
 }
 
 extension ViewController: UISearchBarDelegate {
@@ -139,9 +90,7 @@ extension ViewController: UISearchBarDelegate {
             // Arama metnini kullanarak veri kaynağını filtreleme veya arama işlemleri yapma
             
             let filtreresVideos = self.searchVideos(query: searchText)
-         
             let views = navigationController?.viewControllers
-            
             let v = navigationController?.viewControllers.first as? YouTubeViewController
             v?.isSearch =  true
             v?.videos =  filtreresVideos
@@ -150,7 +99,7 @@ extension ViewController: UISearchBarDelegate {
             print("")
             
         }
-        searchBar.resignFirstResponder() // Klavyeyi kapatma
+        searchBar.resignFirstResponder() 
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

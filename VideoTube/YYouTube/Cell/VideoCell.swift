@@ -8,7 +8,6 @@
 import UIKit
 import SDWebImage
 
-
 class VideoCell: UITableViewCell {
     let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
@@ -16,7 +15,7 @@ class VideoCell: UITableViewCell {
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
-    
+   /*
     let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -24,11 +23,21 @@ class VideoCell: UITableViewCell {
         // Diğer label özelliklerini ayarlayabilirsiniz
         return label
     }()
-    
-    let dateLabel: UILabel = {
+             */
+    let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font =  UIFont.systemFont(ofSize: 13)
+        label.numberOfLines = 0 // Birden fazla satır için
+        label.lineBreakMode = .byWordWrapping // Kelime bazında kırma
+        // Diğer label özelliklerini ayarlayabilirsiniz
+        return label
+    }()
+
+    let dateLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font =  UIFont.systemFont(ofSize: 9)
         // Diğer label özelliklerini ayarlayabilirsiniz
         return label
     }()
@@ -36,11 +45,11 @@ class VideoCell: UITableViewCell {
     let authorLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font =  UIFont.systemFont(ofSize: 11)
+        label.font =  UIFont.systemFont(ofSize: 9)
         // Diğer label özelliklerini ayarlayabilirsiniz
         return label
     }()
-    
+                           
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -56,14 +65,14 @@ class VideoCell: UITableViewCell {
                    thumbnailImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
                    thumbnailImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
                    thumbnailImageView.widthAnchor.constraint(equalToConstant: 220), // Genişlik değeri 220
-                   thumbnailImageView.heightAnchor.constraint(equalToConstant: 220)
+                   thumbnailImageView.heightAnchor.constraint(equalToConstant: 150)
        ])
         
         // titleLabel için constraintler
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor, constant: 8),
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
-            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 50),
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -65),
         ])
         
         // dateLabel için constraintler
@@ -81,21 +90,21 @@ class VideoCell: UITableViewCell {
             authorLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
         ])
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         fatalError("init(coder:) has not been implemented")
     }
-  
     
     func configure(with video: YItem) {
             titleLabel.text = video.title
             dateLabel.text = video.pubDate
-        authorLabel.text = video.author?.rawValue
+        authorLabel.text = video.author
             
             // SDWebImage kütüphanesiyle resmi indirip gösterme
         if let url = URL(string: video.thumbnail!) {
                 thumbnailImageView.sd_setImage(with: url, completed: nil)
             }
+                          
         }
 }

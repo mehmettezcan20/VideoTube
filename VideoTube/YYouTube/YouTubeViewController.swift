@@ -7,8 +7,6 @@
 
 import UIKit
 
-
-
 class YouTubeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var tableView: UITableView!
     
@@ -19,14 +17,13 @@ class YouTubeViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if (isSearch ==  false) {
-            NetworkApi().getData { [self] l in
-                
-                self.videos =  l.items ?? []
-                DispatchQueue.global().async {
-                    
-                    self.tableView.reloadData()
-                }
+        NetworkApi().getData { [weak self] l in
+            guard let self = self else { return }
+            
+            self.videos = (l?.items ?? []).shuffled()    // Burada videoların hangi sıra ile listeleneceği belirtiliyor
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
         
@@ -45,13 +42,12 @@ class YouTubeViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
      
     }
-    
     // MARK: - Table View Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return videos.count
     }
-    
+                 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = VideoCell.init(style: .default, reuseIdentifier: "VideoCell")
         

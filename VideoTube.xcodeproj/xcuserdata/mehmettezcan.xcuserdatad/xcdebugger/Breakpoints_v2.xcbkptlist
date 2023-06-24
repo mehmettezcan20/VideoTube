@@ -14,201 +14,90 @@
             filePath = "VideoTube/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "searchBarCancelButtonClicked(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6247C764-3BAB-4BEA-87FA-771AB8DD6940 - 3a473a02e574c36b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VideoTube.ViewController.searchBarCancelButtonClicked(__C.UISearchBar) -&gt; ()"
-                  moduleName = "VideoTube"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mehmettezcan/Desktop/VideoTube/VideoTube/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "158"
-                  endingLineNumber = "158"
-                  offsetFromSymbolStart = "124">
-               </Location>
-               <Location
-                  uuid = "6247C764-3BAB-4BEA-87FA-771AB8DD6940 - 3a473a02e574c36b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VideoTube.ViewController.searchBarCancelButtonClicked(__C.UISearchBar) -&gt; ()"
-                  moduleName = "VideoTube"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mehmettezcan/Desktop/VideoTube/VideoTube/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "158"
-                  endingLineNumber = "158"
-                  offsetFromSymbolStart = "48">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7A06B9AC-BE74-4C44-8446-9CA9FF513DA3"
+            uuid = "19427B02-2A88-4C18-85A6-3CD795D2F5CB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VideoTube/ViewController.swift"
+            filePath = "VideoTube/YYouTube/Type/YouTubeDTO.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "searchBarSearchButtonClicked(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7A06B9AC-BE74-4C44-8446-9CA9FF513DA3 - eb88d198b33377e7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VideoTube.ViewController.searchBarSearchButtonClicked(__C.UISearchBar) -&gt; ()"
-                  moduleName = "VideoTube"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mehmettezcan/Desktop/VideoTube/VideoTube/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "146"
-                  endingLineNumber = "146"
-                  offsetFromSymbolStart = "964">
-               </Location>
-               <Location
-                  uuid = "7A06B9AC-BE74-4C44-8446-9CA9FF513DA3 - eb88d198b33377e7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VideoTube.ViewController.searchBarSearchButtonClicked(__C.UISearchBar) -&gt; ()"
-                  moduleName = "VideoTube"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mehmettezcan/Desktop/VideoTube/VideoTube/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "146"
-                  endingLineNumber = "146"
-                  offsetFromSymbolStart = "960">
-               </Location>
-            </Locations>
+            startingLineNumber = "6"
+            endingLineNumber = "6"
+            landmarkName = "YouTubeDTO"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "41480E10-3AC6-4C4C-AB1B-23A07201DC4E"
+            uuid = "683D2D7D-65EE-4A17-8F85-FD67EA032498"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VideoTube/ViewController.swift"
+            filePath = "VideoTube/YYouTube/Type/YouTubeDTO.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
-            landmarkName = "searchBarSearchButtonClicked(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "41480E10-3AC6-4C4C-AB1B-23A07201DC4E - eb88d198b33377a5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VideoTube.ViewController.searchBarSearchButtonClicked(__C.UISearchBar) -&gt; ()"
-                  moduleName = "VideoTube"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mehmettezcan/Desktop/VideoTube/VideoTube/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "148"
-                  endingLineNumber = "148"
-                  offsetFromSymbolStart = "1216">
-               </Location>
-               <Location
-                  uuid = "41480E10-3AC6-4C4C-AB1B-23A07201DC4E - eb88d198b33377a5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VideoTube.ViewController.searchBarSearchButtonClicked(__C.UISearchBar) -&gt; ()"
-                  moduleName = "VideoTube"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mehmettezcan/Desktop/VideoTube/VideoTube/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "148"
-                  endingLineNumber = "148"
-                  offsetFromSymbolStart = "1148">
-               </Location>
-            </Locations>
+            startingLineNumber = "7"
+            endingLineNumber = "7"
+            landmarkName = "YouTubeDTO"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4D0C57D1-FE26-4835-AC9C-C4CB3CCCEE4D"
+            uuid = "9B1B1A78-786E-4156-BD53-1040A292A4E8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VideoTube/ViewController.swift"
+            filePath = "VideoTube/YYouTube/Type/YouTubeDTO.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "searchBarSearchButtonClicked(_:)"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "YouTubeDTO"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "534C6F99-540B-4B37-B4F3-BA67732B8719"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VideoTube/YYouTube/Detail/Urlsession.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "getData(complete:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4D0C57D1-FE26-4835-AC9C-C4CB3CCCEE4D - eb88d198b3337608"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VideoTube.ViewController.searchBarSearchButtonClicked(__C.UISearchBar) -&gt; ()"
-                  moduleName = "VideoTube"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mehmettezcan/Desktop/VideoTube/VideoTube/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "868">
-               </Location>
-               <Location
-                  uuid = "4D0C57D1-FE26-4835-AC9C-C4CB3CCCEE4D - eb88d198b3337608"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VideoTube.ViewController.searchBarSearchButtonClicked(__C.UISearchBar) -&gt; ()"
-                  moduleName = "VideoTube"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mehmettezcan/Desktop/VideoTube/VideoTube/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "552">
-               </Location>
-               <Location
-                  uuid = "4D0C57D1-FE26-4835-AC9C-C4CB3CCCEE4D - eb88d198b3337608"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VideoTube.ViewController.searchBarSearchButtonClicked(__C.UISearchBar) -&gt; ()"
-                  moduleName = "VideoTube"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mehmettezcan/Desktop/VideoTube/VideoTube/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "860">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08E16A29-9E4C-4B58-981A-CD5B73D567B1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VideoTube/YYouTube/Detail/Urlsession.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "getData(complete:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
