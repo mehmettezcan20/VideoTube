@@ -1,4 +1,4 @@
-
+import Firebase
 import Foundation
 
 // MARK: - Welcome
@@ -6,8 +6,6 @@ struct YouTubeDTO: Codable {
     let status: String?
     let feed: Feed?
     var items: [YItem]?
-    
-    
 }
 
 // MARK: - Feed
@@ -17,7 +15,6 @@ struct Feed: Codable {
     let author: String?
     let description, image: String?
 }
-
 
 // MARK: - Item
 struct YItem: Codable {

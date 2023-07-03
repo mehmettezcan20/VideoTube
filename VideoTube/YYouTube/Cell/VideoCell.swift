@@ -4,18 +4,19 @@
 //
 //  Created by Mehmet Tezcan on 6.06.2023.
 //
-
 import UIKit
 import SDWebImage
+import Firebase
 
 class VideoCell: UITableViewCell {
-    let thumbnailImageView: UIImageView = {
+    
+        let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
-   /*
+                                        /*
     let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -23,11 +24,11 @@ class VideoCell: UITableViewCell {
         // Diğer label özelliklerini ayarlayabilirsiniz
         return label
     }()
-             */
+                                       */
     let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font =  UIFont.systemFont(ofSize: 13)
+        label.font =  UIFont.systemFont(ofSize: 15)
         label.numberOfLines = 0 // Birden fazla satır için
         label.lineBreakMode = .byWordWrapping // Kelime bazında kırma
         // Diğer label özelliklerini ayarlayabilirsiniz
@@ -105,6 +106,5 @@ class VideoCell: UITableViewCell {
         if let url = URL(string: video.thumbnail!) {
                 thumbnailImageView.sd_setImage(with: url, completed: nil)
             }
-                          
         }
 }

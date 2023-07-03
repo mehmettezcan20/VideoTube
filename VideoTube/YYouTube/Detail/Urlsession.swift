@@ -4,9 +4,9 @@
 //
 //  Created by Mehmet Tezcan on 6.06.2023.
 //
-
 import Foundation
 import UIKit
+import Firebase
 
 class NetworkApi
 {
@@ -59,7 +59,6 @@ class NetworkApi
     
     var response :YouTubeDTO?
     
-    
     func fecthNetwork(url:String, complete:  @escaping (YouTubeDTO) -> Void){
         // JSON verisinin alınacağı URL
         let url = URL(string:url)!
@@ -80,33 +79,23 @@ class NetworkApi
                     print("Hata: \(error.localizedDescription)")
                 }
             }
-            
-            
         }
-
-        task.resume()
-        
+                    task.resume()
     }
+    
     func getData(complete:  @escaping (YouTubeDTO?) -> Void){
-        
-
+    
         self.fecthNetwork(url: url1) { response in
-            
             self.response =  response
             
             self.fecthNetwork(url: self.url2) { res2 in
                 let l =  res2.items
-                
                 let h =  self.response?.items
-                
                 let t =  l! + h!
-
                 self.response?.items =  t
                 complete(self.response )
             }
         }
-
     }
+    
 }
-
-

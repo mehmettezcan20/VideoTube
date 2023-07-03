@@ -26,6 +26,8 @@
 		CB2B3A322A2FD92300567BBF /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CB2B3A312A2FD92300567BBF /* FirebaseAnalyticsSwift */; };
 		CB2B3A342A2FD92300567BBF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CB2B3A332A2FD92300567BBF /* FirebaseAuth */; };
 		CB2B3A362A2FD92300567BBF /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = CB2B3A352A2FD92300567BBF /* FirebaseDatabase */; };
+		CB82666C2A4B38D7009881F8 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB82666B2A4B38D7009881F8 /* PersonViewController.swift */; };
+		CB82666E2A533A5D009881F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB82666D2A533A5D009881F8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		CB2B3A252A2FC22200567BBF /* YouTubeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeDetailViewController.swift; sourceTree = "<group>"; };
 		CB2B3A2A2A2FC94C00567BBF /* YouTubeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeDTO.swift; sourceTree = "<group>"; };
 		CB2B3A2C2A2FCA3D00567BBF /* Urlsession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urlsession.swift; sourceTree = "<group>"; };
+		CB82666B2A4B38D7009881F8 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
+		CB82666D2A533A5D009881F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 		CB2B39FE2A2FB58600567BBF /* VideoTube */ = {
 			isa = PBXGroup;
 			children = (
+				CB82666D2A533A5D009881F8 /* GoogleService-Info.plist */,
+				CB82666B2A4B38D7009881F8 /* PersonViewController.swift */,
 				CB2B3A132A2FB92D00567BBF /* YYouTube */,
 				CB2B39FF2A2FB58600567BBF /* AppDelegate.swift */,
 				CB2B3A012A2FB58600567BBF /* SceneDelegate.swift */,
@@ -206,6 +212,7 @@
 			files = (
 				CB2B3A0C2A2FB58700567BBF /* LaunchScreen.storyboard in Resources */,
 				CB2B3A1A2A2FBCCF00567BBF /* VideoCell.xib in Resources */,
+				CB82666E2A533A5D009881F8 /* GoogleService-Info.plist in Resources */,
 				CB2B3A092A2FB58700567BBF /* Assets.xcassets in Resources */,
 				CB2B3A072A2FB58600567BBF /* Main.storyboard in Resources */,
 			);
@@ -225,6 +232,7 @@
 				CB2B3A262A2FC22200567BBF /* YouTubeDetailViewController.swift in Sources */,
 				CB2B3A152A2FB94C00567BBF /* YouTubeViewController.swift in Sources */,
 				CB2B3A022A2FB58600567BBF /* SceneDelegate.swift in Sources */,
+				CB82666C2A4B38D7009881F8 /* PersonViewController.swift in Sources */,
 				CB2B3A2B2A2FC94C00567BBF /* YouTubeDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

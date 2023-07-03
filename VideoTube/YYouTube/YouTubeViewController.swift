@@ -4,14 +4,13 @@
 //
 //  Created by Mehmet Tezcan on 6.06.2023.
 //
-
 import UIKit
+import Firebase
 
 class YouTubeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
     var tableView: UITableView!
-    
     var videos = [YItem]()
-    
     var isSearch =  false
     
     override func viewDidLoad() {
@@ -19,31 +18,24 @@ class YouTubeViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         NetworkApi().getData { [weak self] l in
             guard let self = self else { return }
-            
             self.videos = (l?.items ?? []).shuffled()    // Burada videoların hangi sıra ile listeleneceği belirtiliyor
-            
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+            self.tableView.reloadData()
             }
         }
         
-        
-       tableView = UITableView(frame: view.bounds, style: .plain)
-    
-       view.addSubview(tableView)
-        
+        tableView = UITableView(frame: view.bounds, style: .plain)
+        view.addSubview(tableView)
         tableView.register(UINib(nibName: "VideoCell", bundle: nil), forCellReuseIdentifier: "VideoCell")
-
         tableView.register(VideoCell.self, forCellReuseIdentifier: "VideoCell")
 
         let nib = UINib(nibName: "VideoCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "VideoCell")
         tableView.delegate = self
         tableView.dataSource = self
-     
     }
-    // MARK: - Table View Data Source
     
+    // MARK: - Table View Data Source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return videos.count
     }
@@ -58,7 +50,6 @@ class YouTubeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     // MARK: - Table View Delegate
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Seçilen hücreye bağlı olarak detay sayfasını açabilirsiniz.
         let video = videos[indexPath.row]
@@ -66,7 +57,6 @@ class YouTubeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     // MARK: - Detay Sayfası
-    
     func showDetailPage(video: YItem) {
         let detailVC = YouTubeDetailViewController()
         detailVC.video = video
