@@ -10,15 +10,11 @@ import FirebaseAuth
 import Firebase
 
 protocol PersonViewControllerDelegate: AnyObject {
-    // Delege için gereken yöntemleri buraya ekleyebilirsiniz
+    
 }
 class PersonViewController: UIViewController {
     
-    //class PersonViewController: UIViewController {
         weak var delegate: PersonViewControllerDelegate?
-
-        // PersonViewController sınıfının diğer özellikleri ve fonksiyonları
-    //}
     
     private let emailTextField: UITextField = {
         let textField = UITextField()
@@ -47,7 +43,7 @@ class PersonViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-    
+     
     private lazy var registerButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Kayıt Ol", for: .normal)
@@ -92,15 +88,12 @@ class PersonViewController: UIViewController {
     }
     
     @objc private func loginButtonTapped() {
-        // Giriş yap butonuna tıklandığında yapılacak işlemler
         guard let mail = emailTextField.text, let pass = passwordTextField.text else {
             return
         }
-        
         FirebaseAuth.Auth.auth().signIn(withEmail: mail, password: pass) { data, error in
-            if (error != nil){
-                error?.localizedDescription
-                //alert
+            if let error = error {
+                print(error.localizedDescription)
                 return
             }
             self.dismiss(animated: false)
@@ -108,18 +101,13 @@ class PersonViewController: UIViewController {
     }
     
     @objc private func registerButtonTapped() {
-        // Kayıt ol butonuna tıklandığında yapılacak işlemler
         guard let email = emailTextField.text, let password = passwordTextField.text else {
             return
         }
-        
-        // Firebase kayıt işlemlerini burada gerçekleştirin
-        // Örneğin:
         FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { [weak self] (user, error) in
             if let error = error {
                 print("Kayıt olma hatası: \(error.localizedDescription)")
             } else {
-                // Kayıt başarılı, Ana sayfaya dön
                 self?.dismiss(animated: false)
             }
         }

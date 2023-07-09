@@ -18,7 +18,7 @@ class YouTubeViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         NetworkApi().getData { [weak self] l in
             guard let self = self else { return }
-            self.videos = (l?.items ?? []).shuffled()    // Burada videoların hangi sıra ile listeleneceği belirtiliyor
+            self.videos = (l?.items ?? []).shuffled() // Burada videoların hangi sıra ile listeleneceği belirtiliyor
             DispatchQueue.main.async {
             self.tableView.reloadData()
             }
@@ -42,10 +42,8 @@ class YouTubeViewController: UIViewController, UITableViewDelegate, UITableViewD
                  
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = VideoCell.init(style: .default, reuseIdentifier: "VideoCell")
-        
         let video = videos[indexPath.row]
         cell.configure(with: video)
-        
         return cell
     }
     
@@ -62,5 +60,4 @@ class YouTubeViewController: UIViewController, UITableViewDelegate, UITableViewD
         detailVC.video = video
         present(detailVC, animated: true, completion: nil)
     }
-
 }
